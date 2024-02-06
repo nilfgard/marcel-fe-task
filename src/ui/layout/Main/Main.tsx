@@ -1,10 +1,12 @@
-import Button from "../../Button/Button";
-import React from "react";
+import React, { FC, PropsWithChildren } from 'react';
+import Container from '../../Container/Container';
 
-export default function Main() {
+const Main: FC<PropsWithChildren> = ({ children }) => {
   return (
     <main>
-      <Button />
+      <Container $center>{children}</Container>
     </main>
   );
-}
+};
+
+export default Main;
